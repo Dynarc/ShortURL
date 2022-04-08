@@ -29,7 +29,7 @@
             }).then(function(response) {
                 return response.text();
             }).then(function(text) {
-                if(/^https?:\/\/(www.)?[a-z]+.[a-z0-9]+\/[a-z0-9]{6}$/.test(text)) {
+                if(/^https?:\/\/(www.)?[a-z0-9]+.[a-z]+\/[a-z0-9]{6}$/i.test(text)) { //? Update regex to match with your URL format if needed
                     resultBox.innerHTML = 'URL : ' + '<span onClick="copy()" style="cursor: pointer">' + text + "</span>";
                 } else {
                     resultBox.innerHTML = 'error';
